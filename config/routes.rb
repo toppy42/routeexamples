@@ -27,12 +27,31 @@ Rails.application.routes.draw do
 
 
   # Exercises:
+  #
+  # Write something about yourself and return it to the browser
+
   # Random number generator
+
   # Print current time and date
+
   # Pick a random state from the given list
 
+
+
   # The following exercises require query params
-  #
+  # eg. http://localhost:3000/my_url?param1=Hello&param2=World
+
+  # Get the value of a query param and return it to the browser (See Example 2 above)
+
+  # Add two numbers together (See Example 3 above)
+
+  # Check if two query params are equal
+
+  # Check if query param is in an array
+
+
+
+  # Todo:
   # Select people by eye color (Hash)
   # Select people by eye color (Class)
   # Encode/decode cypher
@@ -50,20 +69,37 @@ Rails.application.routes.draw do
 
   # Completed Exercises:
   #
+  # Write something about yourself and return it to the browser
+  get 'answers/my_info', controller: 'completed_exercises', action: 'my_info'
+
   # Random number generator
-  get 'answers/random_number_generator', controller: 'completed_exercises', action: 'random_number'
+  get 'answers/random_number', controller: 'completed_exercises', action: 'random_number'
 
   # Print current time and date
   get 'answers/date_time', controller: 'completed_exercises', action: 'date_time'
+
   # Pick a random state from the given list
+  get 'answers/random_state', controller: 'completed_exercises', action: 'random_state'
+
+
 
   # The following exercises require query params
-  # Add two numbers together
+  # eg. http://localhost:3000/my_url?param1=Hello&param2=World
+
+  # Get the value of a query param and return it to the browser (See Example 2 above)
+
+  # Add two numbers together (See Example 3 above)
+
   # Check if two query params are equal
+  get 'answers/equal_params', controller: 'completed_exercises', action: 'equal_params'
+
   # Check if query param is in an array
-  # Get the value of
+  get 'answers/present_in_array', controller: 'completed_exercises', action: 'present_in_array'
 
+  # Get the value from a hash
+  get 'answers/hash_value', controller: 'completed_exercises', action: 'hash_value'
 
+  # Todo:
   # Select people by eye color (Hash)
   # Select people by eye color (Class)
   # Encode/decode cypher

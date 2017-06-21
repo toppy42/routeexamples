@@ -55,7 +55,7 @@ class SearchController < ApplicationController
   # This method will return all states that contain
   # the given string
   def state_filter
-    search_query = params[:search]
+    search_query = params[:search].downcase!
 
     if search_query
       selected_states = STATES.select do |state|

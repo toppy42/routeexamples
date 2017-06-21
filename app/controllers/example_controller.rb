@@ -12,6 +12,18 @@ class ExampleController < ApplicationController
   end
 
   def example4
+    # This is the infamous fizzbuzz problem
+    # All new software devs should be comfortable solving this
+    # in an interview setting on a whiteboard
+    #
+    #
+    #  The fizzbuzz problem has the following requirements:
+    #
+    #  When a number is a multiple of 3, print fizz
+    #  When a number is a multiple of 5, print buzz
+    #  When a number is a multiple of 3 and 5, print fizzbuzz
+
+
     response = []
     for x in 1..100 do
       if x % 15 == 0
@@ -24,6 +36,7 @@ class ExampleController < ApplicationController
         response << x.to_s
       end
     end
-    render html: response.join("\n")
+
+    render plain: response.join("\n")
   end
 end

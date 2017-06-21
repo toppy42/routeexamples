@@ -41,6 +41,37 @@ class CompletedExercisesController < ApplicationController
     'Wisconsin', 'Wyoming'
   ]
 
+  def fizzbuzz
+    # This is the infamous fizzbuzz problem
+    # All new software devs should be comfortable solving this
+    # in an interview setting on a whiteboard
+    #
+    #
+    #  The fizzbuzz problem has the following requirements:
+    #
+    #  When a number is a multiple of 3, print fizz
+    #  When a number is a multiple of 5, print buzz
+    #  When a number is a multiple of 3 and 5, print fizzbuzz
+    #
+    #  This code prints all numbers from 1 to 100, replacing the words
+    #  that match the above rules
+
+    response = []
+    for x in 1..100 do
+      if x % 15 == 0
+        response << "fizzbuzz"
+      elsif x % 5 == 0
+        response << "buzz"
+      elsif x % 3 == 0
+        response << "fizz"
+      else
+        response << x.to_s
+      end
+    end
+
+    render plain: response.join("\n")
+  end
+
   def equal_params
     # http://localhost:3000/answers/equal_params?param1=hello&param2=hello
 

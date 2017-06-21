@@ -1,60 +1,85 @@
 Rails.application.routes.draw do
   # HTTP Verb examples
+  #
+  # The word "Record" usually means an item in the database
+  #
+  # GET => Used to get information
+  # POST => Used to create new records
+  # PUT => Used to update existing records
+  # DELETE => Used to delete records
+
+  # All of these examples do the same thing, but
+  # using different HTTP verbs
+
+  # Only GET works from a browser URL
   get 'example1', to: "example#example1"
-  post 'example2', to: "example#example2"
-  put 'example3', to: "example#example3"
-  delete 'example4', to: 'example#example4'
+  put 'example1', to: "example#example1"
+  post 'example1', to: "example#example1"
+  delete 'example1', to: "example#example1"
 
 
   # Examples for routes, controllers
   # and how to execute ruby in a controller
 
-  # Visit: localhost:3000/example1
+  # Example URL: localhost:3000/example1
   get 'example1', to: "example#example1"
 
-  # Visit: localhost:3000/example2?number=100
+  # Example URL: localhost:3000/example2?number=100
   get 'example2', to: "example#example2"
 
-  # Visit: localhost:3000/example2?number=100&number2=11
+  # Example URL: localhost:3000/example3?number=100&number2=11
   get 'example3', to: "example#example3"
-
-  # Visit: localhost:3000/example4
-  get 'example4', to: 'example#example4'
 
   # More advanced ruby examples
   get 'rock_paper_scissors', controller: 'games', action: 'rock_paper_scissors'
   get 'state_search', controller: 'search', action: 'state_filter'
 
 
-  # Exercises:
+
+
+  # EXERCISES:
   #
-  # Write something about yourself and return it to the browser
-
-  # Random number generator
-
-  # Print current time and date
-
-  # Pick a random state from the given list
+  # INSTRUCTIONS:
+  # For the following exercises, create a single controller called "ExercisesController"
+  # Each of the exercises should be it's own action
 
 
+  # 1. Write something about yourself and return it to the browser
 
+  # 2. Random number generator
+
+  # 3. Print current time and date
+
+  # 4. Pick a random state from the given list
+
+  # 5. Fizzbuzz:
+  #  This is the infamous fizzbuzz problem
+  #  All software devs should be comfortable solving this
+  #  in an interview setting on a whiteboard
+  #
+  #
+  #  The fizzbuzz problem has the following requirements:
+  #
+  #  When a number is a multiple of 3, print fizz
+  #  When a number is a multiple of 5, print buzz
+  #  When a number is a multiple of 3 and 5, print fizzbuzz
+  #
+  #  This code prints all numbers from 1 to 100, replacing the words
+  #  that match the above rules
+
+
+
+  # EXERCISES WITH PARAMS:
   # The following exercises require query params
   # eg. http://localhost:3000/my_url?param1=Hello&param2=World
 
-  # Get the value of a query param and return it to the browser (See Example 2 above)
+  # 6. Get the value of a query param and return it to the browser (See Example 2 above)
 
-  # Add two numbers together (See Example 3 above)
+  # 7. Add two numbers together (See Example 3 above)
 
-  # Check if two query params are equal
+  # 8. Check if two query params are equal
 
-  # Check if query param is in an array
-
-
-
-  # Todo:
-  # Select people by eye color (Hash)
-  # Select people by eye color (Class)
-  # Encode/decode cypher
+  # 9. Check if query param is in an array
 
 
 
@@ -68,6 +93,8 @@ Rails.application.routes.draw do
 
 
   # Completed Exercises:
+  #
+  # Only look at these once you have attempted the exercises above
   #
   # Write something about yourself and return it to the browser
   get 'answers/my_info', controller: 'completed_exercises', action: 'my_info'
@@ -83,6 +110,7 @@ Rails.application.routes.draw do
 
 
 
+  # EXERCISES WITH PARAMS:
   # The following exercises require query params
   # eg. http://localhost:3000/my_url?param1=Hello&param2=World
 
@@ -99,9 +127,12 @@ Rails.application.routes.draw do
   # Get the value from a hash
   get 'answers/hash_value', controller: 'completed_exercises', action: 'hash_value'
 
-  # Todo:
+
+
+
+  # Future Ideas:
+
   # Select people by eye color (Hash)
   # Select people by eye color (Class)
   # Encode/decode cypher
-
 end

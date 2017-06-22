@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  # HTTP Verb examples
+
+
+  # HTTP VERB EXAMPLES
   #
   # The word "Record" usually means an item in the database
   #
@@ -32,7 +34,11 @@ Rails.application.routes.draw do
   # curl -X POST localhost:3000/example
 
 
-  # Examples for routes, controllers
+
+
+
+
+  # EXAMPLES FOR ROUTES AND CONTROLLERS
   # and how to execute ruby in a controller
 
   # Example URL: localhost:3000/example1
@@ -45,7 +51,7 @@ Rails.application.routes.draw do
   # Example URL: localhost:3000/example3?number=100&number2=11
   get 'example3', to: "example#example3"
 
-  # Example URL: localhost:3000/example3?number=100&number2=11
+  # Example URL: localhost:3000/but-why
   get 'but-why', to: "example#proof_you_can_name_this_whatever_123_abc"
 
 

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  # HTTP Verb examples
+
+
+  # HTTP VERB EXAMPLES
   #
   # The word "Record" usually means an item in the database
   #
@@ -13,12 +15,30 @@ Rails.application.routes.draw do
 
   # Only GET works from a browser URL
   get 'example1', to: "example#example1"
+  # curl localhost:3000/example1
+
   put 'example1', to: "example#example1"
+  # curl - X PUT localhost:3000/example1
+
   post 'example1', to: "example#example1"
+  # curl - X POST localhost:3000/example1
+
   delete 'example1', to: "example#example1"
+  # curl - X DELETE localhost:3000/example1
+
+  # These examples use different HTTP verbs to route to different methods
+  put 'example', to: "example#example_put"
+  # curl -X PUT localhost:3000/example
+
+  post 'example', to: "example#example_post"
+  # curl -X POST localhost:3000/example
 
 
-  # Examples for routes, controllers
+
+
+
+
+  # EXAMPLES FOR ROUTES AND CONTROLLERS
   # and how to execute ruby in a controller
 
   # Example URL: localhost:3000/example1
@@ -27,12 +47,21 @@ Rails.application.routes.draw do
   # Example URL: localhost:3000/example2?number=100
   get 'example2', to: "example#example2"
 
+
   # Example URL: localhost:3000/example3?number=100&number2=11
   get 'example3', to: "example#example3"
 
+  # Example URL: localhost:3000/but-why
+  get 'but-why', to: "example#proof_you_can_name_this_whatever_123_abc"
+
+
   # More advanced ruby examples
+  # These use the alternative syntax to specify controller and action
   get 'rock_paper_scissors', controller: 'games', action: 'rock_paper_scissors'
   get 'state_search', controller: 'search', action: 'state_filter'
+
+
+
 
 
 
@@ -85,14 +114,7 @@ Rails.application.routes.draw do
 
 
 
-
-
-
-
-
-
-
-  # Completed Exercises:
+  # COMPLETED EXERCISES:
   #
   # Only look at these once you have attempted the exercises above
   #
@@ -107,6 +129,7 @@ Rails.application.routes.draw do
 
   # Pick a random state from the given list
   get 'answers/random_state', controller: 'completed_exercises', action: 'random_state'
+
 
 
 
@@ -126,7 +149,6 @@ Rails.application.routes.draw do
 
   # Get the value from a hash
   get 'answers/hash_value', controller: 'completed_exercises', action: 'hash_value'
-
 
 
 

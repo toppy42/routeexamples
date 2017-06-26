@@ -1,0 +1,13 @@
+<%# The form tag can take arguments for the action name
+And which HTTP verb we want to submit with ("method" option)
+
+Normally, it would default to POST verb, but we're forcing
+it to choose GET instead.  Because it's a GET, the params
+are going to be sent as query params as part of the URL %>
+
+<h1>Example of a basic form</h1>
+<%= form_tag("accept_submitted_params", method: "get") do %>
+  <%= label_tag(:given_text, "Enter some text: ") %>
+  <%= text_field_tag(:given_text) %>
+  <%= submit_tag("Click this button to submit form") %>
+<% end %>

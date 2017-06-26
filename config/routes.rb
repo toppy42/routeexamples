@@ -1,36 +1,50 @@
 Rails.application.routes.draw do
 
 
-  # HTTP VERB EXAMPLES
+  # VIEW EXAMPLES
+
+  # Rendered with explicit path name
+  get 'example1', to: 'example#example1'
+
+  # Rendered with rails magic
+  get 'example2', to: 'example#example2'
+
+  # Passing data to the view
+  get 'example3', to: 'example#example3'
+
+
+
+
+  # FORM EXAMPLES
   #
-  # The word "Record" usually means an item in the database
+  # Forms can submit data like query params
+
+
+  # Form that can submit data
   #
-  # GET => Used to get information
-  # POST => Used to create new records
-  # PUT => Used to update existing records
-  # DELETE => Used to delete records
+  get 'forms/starter_form', controller: 'forms', action: 'starter_form'
 
-  # All of these examples do the same thing, but
-  # using different HTTP verbs
+  get 'forms/accept_submitted_params', controller: 'forms', action: 'accept_submitted_params'
 
-  # Only GET works from a browser URL
-  get 'example1', to: "example#example1"
-  # curl localhost:3000/example1
 
-  put 'example1', to: "example#example1"
-  # curl - X PUT localhost:3000/example1
 
-  post 'example1', to: "example#example1"
-  # curl - X POST localhost:3000/example1
 
-  delete 'example1', to: "example#example1"
-  # curl - X DELETE localhost:3000/example1
 
-  # These examples use different HTTP verbs to route to different methods
-  put 'example', to: "example#example_put"
-  # curl -X PUT localhost:3000/example
 
-  post 'example', to: "example#example_post"
-  # curl -X POST localhost:3000/example
+
+
+
+
+
+  # More rails magic
+  #
+  # Rails can guess the name of this route by the url
+  #
+  # The "example/" part tells rails that we want
+  # the "ExampleController"
+  #
+  # The "rails_magic_example" tells rails that we want
+  # the action "rails_magic_example"
+  get 'example/rails_magic_example'
 
 end

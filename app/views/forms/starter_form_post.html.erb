@@ -6,7 +6,8 @@ it to choose GET instead.  Because it's a GET, the params
 are going to be sent as query params as part of the URL %>
 
 <h1>Example of a basic POST form</h1>
-<%= form_tag("accept_submitted_params_post") do %>
+<%# EXERCISE: Change this to be a POST instead of a GET %>
+<%= form_tag("accept_submitted_params", method: "get") do %>
   <%= label_tag(:given_text, "Enter some text: ") %>
   <%= text_field_tag(:given_text) %>
   <%= submit_tag("Click this button to submit form") %>

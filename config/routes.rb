@@ -27,12 +27,12 @@ Rails.application.routes.draw do
   get 'forms/accept_submitted_params', controller: 'forms', action: 'accept_submitted_params'
 
 
-  # Form that can submit data via a POST request
+  # Exercise: Form that can submit data via a POST request
   #
   get 'forms/starter_form_post', controller: 'forms', action: 'starter_form_post'
 
-  # This route can only be accessed via a form or from curl
-  post 'forms/accept_submitted_params_post', controller: 'forms', action: 'accept_submitted_params_post'
+  # Change this to be a "post" request
+  get 'forms/accept_submitted_params_post', controller: 'forms', action: 'accept_submitted_params_post'
 
 
 

@@ -13,12 +13,14 @@ class FormsController < ApplicationController
   end
 
   def starter_form_post
-    # automagically render file: views/forms/starter_form_post.html.erb
+    # EXERCISE: Nothing to do here
+    # rails automagically renders file: views/forms/starter_form_post.html.erb
   end
 
   def accept_submitted_params_post
     # Post params are accessible the same way as
     # URL query params, eg. params[:given_text]
-    @params = params
+
+    # EXERCISE: Pass the params via an instance variable
   end
 end

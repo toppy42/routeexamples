@@ -29,6 +29,8 @@ Rails.application.routes.draw do
 
   # Exercise: Form that can submit data via a POST request
   #
+  # Follow the path from this route, to the form to the next route
+  # at each step, there will be a note about what to do
   get 'forms/starter_form_post', controller: 'forms', action: 'starter_form_post'
 
   # Change this to be a "post" request

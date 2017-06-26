@@ -1,0 +1,20 @@
+<h1>Vending Machine Mapping</h1>
+
+<table>
+  <tr>
+    <th>Item Code</th>
+    <th>Item Name</th>
+  </tr>
+
+  <% @vending_machine_hash.each do |code, item_name| %>
+    <tr>
+      <td><%= code %></td>
+      <td><%= item_name %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p>Each item in this table is passed using the @vending_machine_hash
+Instance Variable from ExampleController#example3.
+We then iterate over the hash to generate a row in the table for each
+entry</p>

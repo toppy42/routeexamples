@@ -20,11 +20,19 @@ Rails.application.routes.draw do
   # Forms can submit data like query params
 
 
-  # Form that can submit data
+  # Form that can submit data via a GET request
   #
   get 'forms/starter_form', controller: 'forms', action: 'starter_form'
 
   get 'forms/accept_submitted_params', controller: 'forms', action: 'accept_submitted_params'
+
+
+  # Form that can submit data via a POST request
+  #
+  get 'forms/starter_form_post', controller: 'forms', action: 'starter_form_post'
+
+  # This route can only be accessed via a form or from curl
+  post 'forms/accept_submitted_params_post', controller: 'forms', action: 'accept_submitted_params_post'
 
 
 

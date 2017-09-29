@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+#full-size{
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    background-size: contain;
+    color: orange;
+}

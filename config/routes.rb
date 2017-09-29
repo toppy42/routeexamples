@@ -12,6 +12,11 @@ Rails.application.routes.draw do
   # Passing data to the view
   get 'example3', to: 'example#example3'
 
+  # Using images from the asset pipeline
+  get 'image-example', to: 'example#image_example'
+
+  get 'background-image-example', to: 'example#background_image_example'
+
 
 
   # FORM EXAMPLES
@@ -35,6 +40,10 @@ Rails.application.routes.draw do
   # Change this to be a "post" request
   get 'forms/accept_submitted_params_post', controller: 'forms', action: 'accept_submitted_params_post'
 
+  get 'forms/example_input_types_form', controller: 'forms', action: 'example_input_types_form'
+
+  get 'forms/accept_example_input_types_form', controller: 'forms', action: 'accept_example_input_types_form'
+
 
   # More rails magic
   #
@@ -46,6 +55,7 @@ Rails.application.routes.draw do
   # The "rails_magic_example" tells rails that we want
   # the action "rails_magic_example"
   get 'example/rails_magic_example'
+
 
 
   # Exercises
@@ -61,16 +71,19 @@ Rails.application.routes.draw do
 
   post 'solutions/madlib', to: 'solutions#mad_lib_output'
 
-  get 'solutions/tic-tac-toe', to: 'solutions#tic_tac_toe'
 
-  put 'solutions/tic-tac-toe', to: 'solutions#tic_tac_toe'
 
   # 2. Build a page that lets you choose a date range (i.e. JAN 1 1901 - DEC 31 2000)
   # Calculate how many sundays occured on the first of the month, how many wednesdays occured
   # on the 15th of the month, and how many fridays occured on the 13th of the month and display
   # the results of the calculation on a second page
 
+  
+  
   # 3. Build a tic tac toe game. Please note that this is hard
 
+  get 'solutions/tic-tac-toe', to: 'solutions#tic_tac_toe'
+
+  put 'solutions/tic-tac-toe', to: 'solutions#tic_tac_toe'
 
 end

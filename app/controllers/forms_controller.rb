@@ -26,13 +26,14 @@ class FormsController < ApplicationController
 
   def example_input_types_form
     # EXERCISE: Nothing to do here
-    # rails automagically renders file: views/forms/starter_form_post.html.erb
+    # rails automagically renders file: views/forms/example_input_types_form.html.erb
   end
 
   def accept_example_input_types_form
     # EXERCISE: this method contains byebug which causes
     # execution to stop so that you can play around and debug
     # Open up the terminal where you are running the server process to see what this looks like
+    # Take a look at https://github.com/deivid-rodriguez/byebug for more info
     byebug
     render plain: params.inspect
   end

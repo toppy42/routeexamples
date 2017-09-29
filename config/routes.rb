@@ -12,6 +12,11 @@ Rails.application.routes.draw do
   # Passing data to the view
   get 'example3', to: 'example#example3'
 
+  # Using images from the asset pipeline
+  get 'image-example', to: 'example#image_example'
+
+  get 'background-image-example', to: 'example#background_image_example'
+
 
 
 
@@ -42,12 +47,6 @@ Rails.application.routes.draw do
   get 'forms/accept_example_input_types_form', controller: 'forms', action: 'accept_example_input_types_form'
 
 
-
-
-
-
-
-
   # More rails magic
   #
   # Rails can guess the name of this route by the url
@@ -58,5 +57,8 @@ Rails.application.routes.draw do
   # The "rails_magic_example" tells rails that we want
   # the action "rails_magic_example"
   get 'example/rails_magic_example'
+
+
+
 
 end

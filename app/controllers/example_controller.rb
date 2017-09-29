@@ -39,6 +39,15 @@ class ExampleController < ApplicationController
     # automagically render the correct file
   end
 
+  def image_example
+    @image_num = rand(0..9)
+  end
+
+  def background_image_example
+    @image_num = rand(0..9)
+  end
+
+
   def rails_magic_example
     render plain: "MAGIC!!!"
   end

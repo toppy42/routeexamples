@@ -1,0 +1,24 @@
+<h1>Fill in the words</h1>
+<%= form_tag("madlib", method: "post") do %>
+  <div class="field">
+    <%= label_tag(:adjective, "Adjective") %>
+    <%= text_field_tag(:adjective) %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:noun, "Noun") %>
+    <%= text_field_tag(:noun) %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:animal, "Animal") %>
+    <%= text_field_tag(:animal) %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:noise, "Noise") %>
+    <%= text_field_tag(:noise) %>
+  </div>
+
+  <%= submit_tag("Click here to see your madlib!") %>
+<% end %>

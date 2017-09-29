@@ -1,0 +1,25 @@
+<h1>Tic Tac Toe</h1>
+<div>It's <%= @player %>'s turn</div>
+
+<%= form_tag("tic-tac-toe", method: "put") do %>
+<%= hidden_field_tag "player", @player %>
+<table>
+  <% for i in 0..8  %>
+    <%if i % 3 == 0 %>
+     <tr>
+    <% end %>
+      <td class="square <%= 'v' if i % 3 == 1 %> <%= 'h' if i/3 == 1 %>">
+        <%= hidden_field_tag "board[]", @board[i] %>
+        <% if !(@board[i] == "x" || @board[i] == "o") %>
+        <%= radio_button_tag(:position, i) %>
+        <% else %>
+        <%= @board[i] %>
+        <% end %>
+      </td>
+    <%if i % 3 == 2 %>
+     </tr>
+    <% end %>
+  <% end %>
+</table>
+<%= submit_tag("Click this button to make your move") %>
+<% end %>

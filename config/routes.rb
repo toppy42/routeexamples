@@ -19,7 +19,6 @@ Rails.application.routes.draw do
 
 
 
-
   # FORM EXAMPLES
   #
   # Forms can submit data like query params
@@ -41,7 +40,6 @@ Rails.application.routes.draw do
   # Change this to be a "post" request
   get 'forms/accept_submitted_params_post', controller: 'forms', action: 'accept_submitted_params_post'
 
-
   get 'forms/example_input_types_form', controller: 'forms', action: 'example_input_types_form'
 
   get 'forms/accept_example_input_types_form', controller: 'forms', action: 'accept_example_input_types_form'
@@ -60,5 +58,32 @@ Rails.application.routes.draw do
 
 
 
+  # Exercises
+  # Try to style all of your excercises with css
+  #
+  # 1. Build a mad lib. This should conist of two views/routes.
+  # The first will be a form asking for adjectives, nouns, verbes etc.
+  # The second should reveal what you wrote.
+  # Checkout http://www.madtakes.com/ for examples.
+  # This one http://www.madtakes.com/libs/185.html should be particularly easy to replicate
+
+  get 'solutions/madlib', to: 'solutions#mad_lib_input'
+
+  post 'solutions/madlib', to: 'solutions#mad_lib_output'
+
+
+
+  # 2. Build a page that lets you choose a date range (i.e. JAN 1 1901 - DEC 31 2000)
+  # Calculate how many sundays occured on the first of the month, how many wednesdays occured
+  # on the 15th of the month, and how many fridays occured on the 13th of the month and display
+  # the results of the calculation on a second page
+
+  
+  
+  # 3. Build a tic tac toe game. Please note that this is hard
+
+  get 'solutions/tic-tac-toe', to: 'solutions#tic_tac_toe'
+
+  put 'solutions/tic-tac-toe', to: 'solutions#tic_tac_toe'
 
 end

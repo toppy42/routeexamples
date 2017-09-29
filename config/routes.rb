@@ -37,7 +37,9 @@ Rails.application.routes.draw do
   get 'forms/accept_submitted_params_post', controller: 'forms', action: 'accept_submitted_params_post'
 
 
+  get 'forms/example_input_types_form', controller: 'forms', action: 'example_input_types_form'
 
+  get 'forms/accept_example_input_types_form', controller: 'forms', action: 'accept_example_input_types_form'
 
 
 

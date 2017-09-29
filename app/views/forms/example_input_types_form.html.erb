@@ -1,0 +1,83 @@
+<h1>Example of a GET form with many different input types</h1>
+<%= form_tag("accept_example_input_types_form", method: "get") do %>
+  <div class="field">
+    <%= label_tag(:given_text, "Enter some text: ") %>
+    <%= text_field_tag(:given_text) %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:more_text, "Enter more text: ") %>
+    <%= text_area_tag(:more_text, "This is a bigger text box. It contains default text", size: "24x6") %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:city_id, "Choose a city") %>
+    <%= select_tag(:city_id,
+      options_for_select([['Boston', 1,], ['New York', 2,], ['Los Angeles', 3,], ['Chicago', 4,]], 4)) %>
+    <%# Notice that options_for_select takes two arguments. A list and a default %>
+    <%# The list contains lists which have first some text and then a value which is the param ultimately passed back %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:city_name, "Choose a number") %>
+    <%= select_tag(:city_name,
+      options_for_select([[1, 'Boston',], [2, 'New York',], [3, 'Los Angeles',], [4, 'Chicago',]], 'Boston')) %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:date, "Choose a date") %>
+    <%= select_date Date.today, prefix: :date %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:date, "Choose a date") %>
+    <%= select_year(2009) %>
+  </div>
+
+  <div class="field">
+    <%= check_box_tag(:web_developer, 1, true) %>
+    <%= label_tag(:web_developer, "I am a web_developer") %>
+  </div>
+
+  <div class="field">
+    <%= check_box_tag(:thumbless) %>
+    <%= label_tag(:thumbless, "I am thumbless") %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:age, "Choose exactly one age") %><br>
+    <%= radio_button_tag(:age, "child") %>
+    <%= label_tag(:age_child, "I am younger than 21") %>
+    <%= radio_button_tag(:age, "adult") %>
+    <%= label_tag(:age_adult, "I'm over 21") %>
+    <%= radio_button_tag(:age, "senior") %>
+    <%= label_tag(:age_senior, "I'm over 65") %>
+    <%= radio_button_tag(:age, "immortal") %>
+    <%= label_tag(:age_unknown, "I'm so old I have forgotten my age") %>
+  </div>
+
+  <div class="field">
+    <%= check_box_tag(:thumbless) %>
+    <%= label_tag(:thumbless, "I am thumbless") %>
+  </div>
+
+  <div class="field">
+    <%= check_box_tag(:thumbless) %>
+    <%= label_tag(:thumbless, "I am thumbless") %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:phone_number, "This is a special phone field") %>
+    <%= telephone_field(:phone_number, nil) %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:range, "This is a range field. It goes from 0") %>
+    <%= range_field(:range, in: 0..100) %>
+    <%= label_tag(:range, "to 100") %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag("Click this button to submit form") %>
+  </div>
+<% end %>

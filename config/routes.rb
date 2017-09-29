@@ -61,16 +61,16 @@ Rails.application.routes.draw do
 
   post 'solutions/madlib', to: 'solutions#mad_lib_output'
 
-  get 'solutions/tic-tac-toe', to: 'solutions#tic_tac_toe'
-
-  put 'solutions/tic-tac-toe', to: 'solutions#tic_tac_toe'
-
   # 2. Build a page that lets you choose a date range (i.e. JAN 1 1901 - DEC 31 2000)
   # Calculate how many sundays occured on the first of the month, how many wednesdays occured
   # on the 15th of the month, and how many fridays occured on the 13th of the month and display
   # the results of the calculation on a second page
 
   # 3. Build a tic tac toe game. Please note that this is hard
+
+  get 'solutions/tic-tac-toe', to: 'solutions#tic_tac_toe'
+
+  put 'solutions/tic-tac-toe', to: 'solutions#tic_tac_toe'
 
 
 end
